@@ -1,0 +1,119 @@
+X_train: (800, 287) | X_test: (200, 287)
+y_train: Counter({np.int32(1): 400, np.int32(0): 400}) | y_test: Counter({np.int32(1): 100, np.int32(0): 100})
+
+>>> Training Model 1: Logistic Regression...
+  CV Recall: 86.00% ± 4.14%
+
+─────────────────────────────────────────────
+  Model     : Logistic Regression
+─────────────────────────────────────────────
+  Accuracy  : 89.00%
+  Precision : 88.24%
+  Recall    : 90.00%  ← Cancer detection
+  F1 Score  : 89.11%
+─────────────────────────────────────────────
+
+>>> Training Model 2: SVM with GridSearchCV...
+  Best SVM params : {'C': 1, 'gamma': 'auto'}
+  Best CV Recall  : 94.50%
+
+─────────────────────────────────────────────
+  Model     : SVM (Tuned)
+─────────────────────────────────────────────
+  Accuracy  : 87.50%
+  Precision : 84.40%
+  Recall    : 92.00%  ← Cancer detection
+  F1 Score  : 88.04%
+─────────────────────────────────────────────
+
+>>> Training Model 3: Random Forest...
+  Best RF params  : {'n_estimators': 300, 'min_samples_split': 5, 'max_depth': 10}
+  Best CV Recall  : 86.75%
+
+─────────────────────────────────────────────
+  Model     : Random Forest (Tuned)
+─────────────────────────────────────────────
+  Accuracy  : 84.00%
+  Precision : 82.69%
+  Recall    : 86.00%  ← Cancer detection
+  F1 Score  : 84.31%
+─────────────────────────────────────────────
+
+>>> Training Model 4: Decision Tree...
+  CV Recall: 77.75% ± 5.67%
+
+─────────────────────────────────────────────
+  Model     : Decision Tree
+─────────────────────────────────────────────
+  Accuracy  : 80.50%
+  Precision : 76.07%
+  Recall    : 89.00%  ← Cancer detection
+  F1 Score  : 82.03%
+─────────────────────────────────────────────
+
+>>> Training Model 5: KNN (finding best k)...
+  k=3 → CV Recall: 80.00%
+  k=5 → CV Recall: 83.75%
+  k=7 → CV Recall: 84.25%
+  k=9 → CV Recall: 86.50%
+  k=11 → CV Recall: 86.50%
+  Best k selected : 9
+
+─────────────────────────────────────────────
+  Model     : KNN (k=9)
+─────────────────────────────────────────────
+  Accuracy  : 85.00%
+  Precision : 86.46%
+  Recall    : 83.00%  ← Cancer detection
+  F1 Score  : 84.69%
+─────────────────────────────────────────────
+
+>>> Training Model 6: Naive Bayes...
+  CV Recall: 79.75% ± 3.91%
+
+─────────────────────────────────────────────
+  Model     : Naive Bayes
+─────────────────────────────────────────────
+  Accuracy  : 83.00%
+  Precision : 82.35%
+  Recall    : 84.00%  ← Cancer detection
+  F1 Score  : 83.17%
+─────────────────────────────────────────────
+
+>>> Training Model 7: Soft Voting Ensemble...
+  CV Recall: 86.50% ± 3.91%
+
+─────────────────────────────────────────────
+  Model     : Voting Ensemble
+─────────────────────────────────────────────
+  Accuracy  : 90.50%
+  Precision : 90.10%
+  Recall    : 91.00%  ← Cancer detection
+  F1 Score  : 90.55%
+─────────────────────────────────────────────
+
+
+═════════════════════════════════════════════════════════════════
+        FINAL MODEL COMPARISON — Sorted by Cancer Recall
+═════════════════════════════════════════════════════════════════
+#   Model                         Accuracy  Precision   Recall       F1
+─────────────────────────────────────────────────────────────────
+1   SVM (Tuned)                     87.50%     84.40%   92.00%   88.04%
+2   Voting Ensemble                 90.50%     90.10%   91.00%   90.55%
+3   Logistic Regression             89.00%     88.24%   90.00%   89.11%
+4   Decision Tree                   80.50%     76.07%   89.00%   82.03%
+5   Random Forest (Tuned)           84.00%     82.69%   86.00%   84.31%
+6   Naive Bayes                     83.00%     82.35%   84.00%   83.17%
+7   KNN (k=9)                       85.00%     86.46%   83.00%   84.69%
+═════════════════════════════════════════════════════════════════
+
+✓ Comparison table saved → outputs/model_comparison.csv
+
+🏆 Best Model   : SVM (Tuned)
+   Accuracy     : 87.5%
+   Precision    : 84.4%
+   Recall       : 92.0%
+   F1 Score     : 88.04%
+
+Meaning: 9.2 out of 10 cancer cases correctly identified by this model.
+

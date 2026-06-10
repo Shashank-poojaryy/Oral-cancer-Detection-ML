@@ -1,0 +1,87 @@
+ORAL CANCER DETECTION — FULL CLASSIFICATION REPORTS
+============================================================
+
+MODEL: Logistic Regression
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.90      0.88      0.89       100
+      CANCER       0.88      0.90      0.89       100
+
+    accuracy                           0.89       200
+   macro avg       0.89      0.89      0.89       200
+weighted avg       0.89      0.89      0.89       200
+
+
+MODEL: SVM (Tuned)
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.91      0.83      0.87       100
+      CANCER       0.84      0.92      0.88       100
+
+    accuracy                           0.88       200
+   macro avg       0.88      0.88      0.87       200
+weighted avg       0.88      0.88      0.87       200
+
+
+MODEL: Random Forest
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.85      0.82      0.84       100
+      CANCER       0.83      0.86      0.84       100
+
+    accuracy                           0.84       200
+   macro avg       0.84      0.84      0.84       200
+weighted avg       0.84      0.84      0.84       200
+
+
+MODEL: Decision Tree
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.87      0.72      0.79       100
+      CANCER       0.76      0.89      0.82       100
+
+    accuracy                           0.81       200
+   macro avg       0.81      0.80      0.80       200
+weighted avg       0.81      0.81      0.80       200
+
+
+MODEL: KNN (k=9)
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.84      0.87      0.85       100
+      CANCER       0.86      0.83      0.85       100
+
+    accuracy                           0.85       200
+   macro avg       0.85      0.85      0.85       200
+weighted avg       0.85      0.85      0.85       200
+
+
+MODEL: Naive Bayes
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.84      0.82      0.83       100
+      CANCER       0.82      0.84      0.83       100
+
+    accuracy                           0.83       200
+   macro avg       0.83      0.83      0.83       200
+weighted avg       0.83      0.83      0.83       200
+
+
+MODEL: Voting Ensemble
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+  NON-CANCER       0.91      0.90      0.90       100
+      CANCER       0.90      0.91      0.91       100
+
+    accuracy                           0.91       200
+   macro avg       0.91      0.91      0.90       200
+weighted avg       0.91      0.91      0.90       200
+
+

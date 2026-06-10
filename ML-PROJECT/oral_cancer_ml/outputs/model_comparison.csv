@@ -1,0 +1,8 @@
+Model,Accuracy,Precision,Recall,F1_Score
+SVM (Tuned),87.5,84.4,92.0,88.04
+Voting Ensemble,90.5,90.1,91.0,90.55
+Logistic Regression,89.0,88.24,90.0,89.11
+Decision Tree,80.5,76.07,89.0,82.03
+Random Forest (Tuned),84.0,82.69,86.0,84.31
+Naive Bayes,83.0,82.35,84.0,83.17
+KNN (k=9),85.0,86.46,83.0,84.69
